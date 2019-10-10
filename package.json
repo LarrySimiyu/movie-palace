@@ -2,6 +2,11 @@
   "name": "movie-palace",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "coss-env DB_ENV=testing jest",
+    "start": "node index.js"
+  },
   "repository": "https://github.com/LarrySimiyu/movie-palace.git",
   "author": "LarrySimiyu <larry.simiyu@gmail.com>",
   "license": "MIT",
