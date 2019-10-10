@@ -4,7 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 // rouuters
 
-//const userRouter = require("../routes/user-router");
+const userRouter = require("../routes/user-router");
 const filmInfoRouter = require("../routes/filmInfo-router");
 //const hitListRouter = require("../routes/hitList-router");
 //const screenplayImgRouter = require("../routes/screenplayImage-router");
@@ -15,7 +15,7 @@ module.exports = server => {
   server.use(express.json());
   server.use(cors());
   server.use(morgan("dev"));
-  //server.use("/api/user", userRouter);
+  server.use("/api/user", userRouter);
   //server.use("/api/hitList", hitListRouter);
   server.use("/api/filmInfo", filmInfoRouter);
   //server.use("/api/screenplayImage", screenplayImgRouter);
