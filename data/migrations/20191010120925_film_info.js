@@ -3,7 +3,7 @@ exports.up = function(knex) {
     tbl.increments();
     tbl.string("title", 100).notNullable();
     tbl.string("screenwriter", 100).notNullable();
-    tbl.string("co_writer", 100);
+    tbl.string("cowriter", 100);
     tbl.text("description", 1000).notNullable();
     tbl.string("category", 25).notNullable(); // category tags? - find by category tags
   });

@@ -32,19 +32,19 @@ router.get("/", async (req, res) => {
 // delete from the hitlist if user inputs movie in main list
 // add to mainlist if user uploads from hitlist
 
-router.post("/upload", function(req, res) {
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).send("No files were uploaded");
-  }
+// router.post("/upload", function(req, res) {
+//   if (!req.files || Object.keys(req.files).length === 0) {
+//     return res.status(400).send("No files were uploaded");
+//   }
 
-  let sampleFile = req.files.sampleFile;
+//   let sampleFile = req.files.sampleFile;
 
-  sampleFile.mv("/somewhere/on/server/filename.pdf", function(error) {
-    if (error) return res.status(500).send(error);
+//   sampleFile.mv("/somewhere/on/server/filename.pdf", function(error) {
+//     if (error) return res.status(500).send(error);
 
-    res.send("File uplaoded");
-  });
-});
+//     res.send("File uplaoded");
+//   });
+// });
 
 // post endpoint to add to hitList
 // can only post if there is nothing else in the other table
