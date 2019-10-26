@@ -7,7 +7,7 @@ exports.up = function(knex) {
     tbl.text("description", 1000).notNullable();
     tbl.string("category", 25).notNullable(); // category tags? - find by category tags
     tbl.text("pdfurl", 1000);
-    tbl.text("cool", 45);
+    tbl.string("cool", 45);
   });
 };
 
