@@ -6,7 +6,7 @@ exports.up = function(knex) {
     tbl.string("cowriter", 100);
     tbl.text("description", 1000).notNullable();
     tbl.string("category", 25).notNullable(); // category tags? - find by category tags
-    tbl.text("pdf_url");
+    tbl.text("pdfurl");
   });
 };
 
