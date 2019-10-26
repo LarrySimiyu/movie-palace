@@ -20,5 +20,4 @@ module.exports = server => {
   server.use("/api/hitList", hitListRouter);
   server.use("/api/filmInfo", filmInfoRouter);
   server.use("/api/pdf", pdfRouter);
-  //server.use("/api/screenplayImage", screenplayImgRouter);
 };
