@@ -34,6 +34,18 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const film = await db.findById(req.params.id);
+    if (film) {
+      res.status(200).json(film);
+    } else {
+      res.status(500).json(error.message);
+    }
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
 // file download functionality - static (how)? // for sure not working
 // router.get("/download", function(req, res) {
 //   const file = `${__dirname}/upload-folder/nameOfFile.png`; // have to target file name based of id
