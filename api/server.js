@@ -5,7 +5,7 @@ const server = express();
 configMiddleware(server);
 
 server.get("/", (req, res) => {
-  res.send("<h1>The back-end is up and running</h1>");
+  res.send("<h1>SERVER SUCCESS</h1>");
 });
 
 module.exports = server;
